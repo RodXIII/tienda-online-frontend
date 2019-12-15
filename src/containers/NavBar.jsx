@@ -16,9 +16,6 @@ class Home extends Component {
 
         return (
             <nav>
-                <button type="button">   
-                <span/>       
-                </button>
                 <div>
                         <ul >
                             <li>
