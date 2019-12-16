@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const register = newUser =>{
     return axios
-        .post('http://localhost:3000/auth/register',{
+        .post('http://localhost:3001/auth/register',{
             userName: newUser.userName,
             password: newUser.password,
             email: newUser.email,

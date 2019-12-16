@@ -1,0 +1,14 @@
+.productCard{
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    margin:0.5rem;
+    flex-direction: column;
+}
+.section{
+    display:flex;
+    height: 25rem;
+    width: 90%;
+}

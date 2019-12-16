@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from './containers/NavBar'
 import Home from './components/Home'
 import Register from './components/RegisterForm'
+import Main from './containers/Main'
+
 
 class App extends Component{
   render(){
@@ -13,12 +15,15 @@ class App extends Component{
       <Router>
         <div className="app">
           <NavBar />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home}>
+            <Main /> 
+           </Route>
             <div className="container">
               <Route exact path="/register" component={Register} />
             </div>
         </div>
       </Router>
+      
       </div>
     )
   }
