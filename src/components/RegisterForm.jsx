@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { register } from './RegisterController'
+import { register } from './registerController'
 
 class Register extends Component{
     constructor(){

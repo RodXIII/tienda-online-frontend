@@ -4,11 +4,40 @@
     height: 20rem;
     justify-content: center;
     align-items: center;
-    margin:0.5rem;
+    /* margin:3rem; */
+    /* padding:1rem; */
     flex-direction: column;
 }
 .section{
+    margin:1rem;
     display:flex;
-    height: 25rem;
-    width: 90%;
+    height: 20rem;
+    border-style: solid;
+    border-width: 0.01ch;
+    border-color: black;
+    
+
+}
+#selectedProduct{
+
+    background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
+    color:white
+}
+button:hover{
+    
+    background-color:#4285F3;
+    width: 5rem;
+}
+
+button{
+
+    background-color: white;
+    width: 5rem;
+} 
+img{
+    margin-bottom:1rem;
+}
+
+.price{
+    font-weight: bold;
 }
