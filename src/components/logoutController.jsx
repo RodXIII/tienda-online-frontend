@@ -1,18 +1,34 @@
 import axios from 'axios'
 
-export const register = newUser =>{
+export const logout = () =>{
+
     return axios
-        .post('http://localhost:3000/auth/register',{
-            userName: newUser.userName,
-            password: newUser.password,
-            email: newUser.email,
-            creditcardNumber: newUser.creditcardNumber,
-            creditcardType: newUser.creditcardType,
-            address: newUser.address,
-            country: newUser.country
+        .get('http://localhost:3001/auth/logout',
+        {headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`
+        }
+
         })
         .then(res => {
-            console.log('Register OK')
+            console.log('Logout OK')
         })
 }
+/* 
+axios({ method: 'get', url: 'your URL', headers: { Authorization: `Bearer ${token}` } })
 
+axios.get(
+    url,
+    {headers: {
+        "name" : "value"
+      }
+    }
+  )
+  .then((response) => {
+      var response = response.data;
+    },
+    (error) => {
+      var status = error.response.status
+    }
+  );
+
+ */

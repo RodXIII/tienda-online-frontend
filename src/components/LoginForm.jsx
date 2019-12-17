@@ -38,7 +38,7 @@ class Login extends Component {
                 <form noValidate onSubmit={this.onSubmit}>
                     <h1 className="h3 mb-3 font-weight-normal">Login</h1>
                     <div>
-                        <label htmlFor="email">Name</label>
+                        <label htmlFor="email">E-Mail</label>
                         <input
                             type="text"
                             name="email"

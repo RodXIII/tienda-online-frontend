@@ -19,6 +19,16 @@ class Home extends Component {
         </ul> 
         )
 
+        const logoutProfLink = (
+            <ul>
+                <li>
+                    <Link to="/logout">
+                    Logout
+                    </Link>
+                </li>
+            </ul> 
+            )
+
         return (
             <nav>
                 <div>
@@ -30,6 +40,7 @@ class Home extends Component {
                             </li>
                         </ul>
                         {loginRegLink}
+                        {logoutProfLink}
                     </div>
             </nav>
         )

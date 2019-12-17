@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Register from './components/RegisterForm'
 import Login from './components/LoginForm'
 import Main from './containers/Main'
+import Logout from './components/LogoutForm'
 
 
 class App extends Component{
@@ -24,6 +25,9 @@ class App extends Component{
             </div>
             <div className="container">
             <Route exact path="/login" component={Login} /> 
+            </div>
+            <div className="container">
+            <Route exact path="/logout" component={Logout} /> 
             </div>
         </div>
       </Router>
