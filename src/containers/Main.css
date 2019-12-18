@@ -1,0 +1,15 @@
+.mainContainer{
+    display:flex;
+    justify-content: flex-start;
+    margin-left:0.5rem !important;
+    margin-right:0.5rem !important;
+    width: 100vw;
+}
+h3{
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    margin-left: 5rem
+   
+}
+

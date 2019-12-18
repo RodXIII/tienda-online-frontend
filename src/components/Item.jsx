@@ -24,7 +24,7 @@ class Item extends Component {
         axios.get('http://localhost:3001/product/allProduct')
             .then(item => {
 
-                console.log("hola")
+        
                 var array = item.data
                 var i = array.length;
                 while (i--) {
@@ -36,7 +36,7 @@ class Item extends Component {
                 this.setState({
                     items: array
                 })
-                console.log("entra aqui" + this.state.items)
+               
 
 
             })
@@ -44,7 +44,7 @@ class Item extends Component {
 
     }
     increaseIndex = (e) => {
-        console.log(this.state.i)
+    
         if (this.state.z < 999) {
         this.setState({
             i: (this.state.i) + 1,
@@ -61,7 +61,7 @@ class Item extends Component {
     }
     }
     decreaseIndex = (e) => {
-        console.log(this.state.i)
+      
         if (this.state.i > 0) {
             this.setState({
                 i: (this.state.i) - 1,
@@ -91,32 +91,37 @@ class Item extends Component {
             return (
                 // <Carousel className='section'>
                 <div className='section'>
-                    <button onClick={this.increaseIndex}></button>
-                    <div className='productCard'>
-                        <img onClick={this.increaseIndex} src={elemento[this.state.z].image} />
-                        
+                    {/* <button onClick={this.increaseIndex}></button> */}
+                    <div className='productCard' onClick={this.increaseIndex} >
+                    
+                        <img  src={elemento[this.state.z].image} />
+                        <img className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130882.png" alt=""/>
                             <h4>{elemento[this.state.z].brand} </h4>
                             <h5>{elemento[this.state.z].name} </h5>
-                            <h4 class="price">{elemento[this.state.z].price} € </h4>
+                            <h4 className="price">{elemento[this.state.z].price} € </h4>
                      
                     </div>
-                    <div className='productCard' id='selectedProduct'>
-                        <img src={elemento[this.state.y].image} />
                    
+                    <div className='productCard' id='selectedProduct'>
+                        <div className='imageContainer'>
+                        <   img src={elemento[this.state.y].image} />
+                        </div>
                             <h4>{elemento[this.state.y].brand} </h4>
                             <h5>{elemento[this.state.y].name} </h5>
-                            <h4 class="price">{elemento[this.state.y].price} € </h4>
+                            <h4 className="price">{elemento[this.state.y].price} € </h4>
                       
                     </div>
-                    <div className='productCard'>
-                        <img onClick={this.decreaseIndex} src={elemento[this.state.i].image} />
-                       
+                    
+
+                    <div className='productCard' onClick={this.decreaseIndex}>
+                    <img className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130884.png" alt=""/>
+                        <img  src={elemento[this.state.i].image}  />
                             <h4>{elemento[this.state.i].brand} </h4>
                             <h5>{elemento[this.state.i].name} </h5>
-                            <h4 class="price">{elemento[this.state.i].price} € </h4>
+                            <h4 className="price">{elemento[this.state.i].price} € </h4>
                      
-                    </div>
-                    <button onClick={this.decreaseIndex}></button>
+                    </div  >
+                    {/* <button onClick={this.decreaseIndex}></button> */}
                 </div>
 
             );
@@ -135,56 +140,3 @@ class Item extends Component {
 
 export default Item;
 
-// class Item extends Component {
-
-
-//     constructor(props) {
-
-//         super(props);
-//         this.state = {
-//             items: []
-//         }
-
-//     }
-//     componentWillMount() {
-
-//         axios.get('http://localhost:3001/product/allProduct')
-//             .then(item => {
-//                 this.setState({
-//                     items: item.data
-//                 })
-
-//             })
-//             .catch(err => { console.log(err) })
-
-
-//     }
-
-//     render() {
-//         let productPack=[]
-//         console.log(this.state.items)
-//         for(let i=0;i<5;i++){
-//             productPack[i]=this.state.items[]
-//         }
-//         return (
-//             <div>
-//                 Products
-//                 <div className='section'>
-//                     {this.state.items.map(item => (
-//                       <div className="productCard">
-
-//                             <img src= {item.image}></img>
-//                             <h4>{item.brand} </h4>
-//                             <h4>{item.name} </h4>
-//                             <h4>{item.price} € </h4>
-
-//                      </div>
-//                     ))}
-//                </div>
-//             </div>
-//         )
-//     }
-
-// }
-
-// export default Item;

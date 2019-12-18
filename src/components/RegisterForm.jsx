@@ -48,7 +48,7 @@ class Register extends Component {
         return (
 
             <div>
-                <form noValidate onSubmit={this.onSubmit}>
+                {/* <form noValidate onSubmit={this.onSubmit}>
                             <h1 className="h3 mb-3 font-weight-normal">Register</h1>
                             <div>
                                 <label htmlFor="userName">Name</label>
@@ -126,8 +126,8 @@ class Register extends Component {
                             Register
                             </button>
                         </form>
-                
-                 {/* <Form>
+                 */}
+                 <Form>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
@@ -177,7 +177,7 @@ class Register extends Component {
                     <Button variant="primary" type="submit">
                         Submit
   </Button>
-                </Form>  */}
+                </Form> 
             </div>
 
         )
