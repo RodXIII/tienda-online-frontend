@@ -1,0 +1,19 @@
+
+
+.menu{
+    background: linear-gradient(to bottom, #D3CCE3, #E9E4F0);
+    height: 6rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a{
+    height:3rem;
+    margin: 3rem;
+    
+}
+
+

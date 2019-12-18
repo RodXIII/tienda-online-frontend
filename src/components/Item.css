@@ -7,6 +7,7 @@
     /* margin:3rem; */
     /* padding:1rem; */
     flex-direction: column;
+
 }
 .section{
     margin:1rem;
@@ -21,11 +22,14 @@
 #selectedProduct{
 
     background: linear-gradient(to bottom, #bdc3c7, #2c3e50);
-    color:white
+    color:white;
+    width: 22rem;
+    
+    
 }
 button:hover{
     
-    background-color:#4285F3;
+    background-color:#929BA3;
     width: 5rem;
 }
 

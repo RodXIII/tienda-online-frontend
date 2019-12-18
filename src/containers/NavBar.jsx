@@ -1,52 +1,60 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import './NavBar.css'
+import { Nav } from 'react-bootstrap'
 
 class Home extends Component {
 
     render() {
         const loginRegLink = (
-        <ul>
-            <li>
-                <Link to="/register">
-                Register
-                </Link>
-            </li>
-            <li>
-            <Link to="/login">
-                Login
-                </Link>
-            </li>
-        </ul> 
+
+
+            <Nav id="nav" variant="tabs" defaultActiveKey="/register">
+
+                <Nav.Item>
+                    <Nav.Link href="/register" >Register</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/login" > Login</Nav.Link>
+                </Nav.Item>
+            
+            </Nav>
+
         )
 
-        const logoutProfLink = (
-            <ul>
-                <li>
-                    <Link to="/logout">
-                    Logout
-                    </Link>
-                </li>
-            </ul> 
-            )
+        const userLink = (
+
+            <Nav variant="tabs">
+                <Nav.Item>
+                    <Nav.Link href="/profile">Profile</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href="/Logout" >Logout</Nav.Link>
+                </Nav.Item>
+
+            
+            </Nav>
+        )
+
 
         return (
-            <nav>
-                <div>
-                        <ul >
-                            <li>
-                                <Link to="/" >
-                                    Home
-                                </Link>
-                            </li>
-                        </ul>
-                        {loginRegLink}
-                        {logoutProfLink}
-                    </div>
-            </nav>
+           
+            <Nav className='menu' variant='tabs'>
+                 
+                <Nav.Item>
+                    <Link to="/">
+                        Home
+                </Link>
+                </Nav.Item>
+
+                {localStorage.token ? userLink : loginRegLink}
+
+            </Nav>
+
         )
 
     }
-    
+
 }
 
 export default withRouter(Home) 

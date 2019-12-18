@@ -8,7 +8,7 @@ export const login = loginUser =>{
         })
         .then(res => {
             localStorage.setItem('token', res.data.token);
-            
+            console.log(localStorage.getItem('token'))
             console.log(res)
             console.log('Login OK')
         })
