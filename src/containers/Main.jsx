@@ -11,14 +11,14 @@ class Main extends Component {
    render() {
       return (
          <span>
-            <h3>All products</h3>
+            <h5 className="banner">All our products are genuine and original brand new.</h5>
          <div className="mainContainer">
 
             <Item />
             <Brand />
 
          </div>
-         <h3><img src="http://www.allaboutcandc.com/uploads/1/0/4/6/10465076/published/great-deal-logo-header-8-18_1.png?1534784895" alt=""/></h3>
+         <p className="banner"><img src="http://www.allaboutcandc.com/uploads/1/0/4/6/10465076/published/great-deal-logo-header-8-18_1.png?1534784895" alt=""/></p>
          <div>
             <Sales />
          </div>

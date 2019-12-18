@@ -5,8 +5,8 @@
     margin-right:0.5rem !important;
     width: 100vw;
 }
-h3{
-    padding: 3rem;
+.banner{
+    padding: 1rem;
     display: flex;
     flex-direction: row;
     margin-left: 5rem

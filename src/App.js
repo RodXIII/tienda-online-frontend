@@ -8,6 +8,7 @@ import Register from './components/RegisterForm'
 import Login from './components/LoginForm'
 import Main from './containers/Main'
 import Logout from './components/LogoutForm'
+import Header from './containers/Header'
 
 
 
@@ -15,11 +16,12 @@ class App extends Component{
   render(){
     return (
       
-      <Router className='container'>
-        <div className='ejemplo'>
+      <Router>
+        <div >
+          <Header/>
           <NavBar />
           <Route exact path="/" component={Home}>
-            <Main className='ejemplo2' /> 
+            <Main/> 
            </Route>
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} /> 

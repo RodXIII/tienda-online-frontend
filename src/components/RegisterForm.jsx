@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { register } from './registerController'
 import { Form, Button, Col } from 'react-bootstrap'
+import './Register.css'
+
 
 
 class Register extends Component {
@@ -47,118 +49,141 @@ class Register extends Component {
     render() {
         return (
 
-            <div>
-                {/* <form noValidate onSubmit={this.onSubmit}>
-                            <h1 className="h3 mb-3 font-weight-normal">Register</h1>
-                            <div>
-                                <label htmlFor="userName">Name</label>
-                                <input 
-                                    type="text"
-                                    name="userName"
-                                    placeholder="Enter a user name"
-                                    value={this.state.userName}
-                                    onChange={this.onChange}
-                                    />
-                                    </div>
-                            <div>
-                                <label htmlFor="password">Password</label>
-                                <input 
-                                    type="text"
-                                    name="password"
-                                    placeholder="Enter a password"
-                                    value={this.state.password}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <div>
-                                <label htmlFor="email">email</label>
-                                <input 
-                                    type="text"
-                                    name="email"
-                                    placeholder="Enter a valid email"
-                                    value={this.state.email}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <div>
-                                <label htmlFor="address">Address</label>
-                                <input 
-                                    type="text"
-                                    name="address"
-                                    placeholder="Enter an address"
-                                    value={this.state.address}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <div>
-                                <label htmlFor="country">Country</label>
-                                <input 
-                                    type="text"
-                                    name="country"
-                                    placeholder="Enter a Country"
-                                    value={this.state.country}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <div>
-                                <label htmlFor="creditcard_number">Creditcard Number</label>
-                                <input 
-                                    type="text"
-                                    name="creditcardNumber"
-                                    placeholder="Enter a creditcard number"
-                                    value={this.state.creditcardNumber}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <div>
-                                <label htmlFor="creditcardType">Creditcard type</label>
-                                <input 
-                                    type="text"
-                                    name="creditcardType"
-                                    placeholder="Enter a password"
-                                    value={this.state.creditcardType}
-                                    onChange={this.onChange}
-                                    />   
-                            </div>
-                            <button
-                            type="submit"
-                            >
-                            Register
+            <div className='registerForm'>
+                <form noValidate onSubmit={this.onSubmit}>
+                    <h1 className="h3 mb-3 font-weight-normal">Register</h1>
+
+                    <div className="formFields">
+                        <label htmlFor="userName">Name</label>
+                        <input
+                            className="Register"
+                            type="text"
+                            name="userName"
+                            placeholder="Enter a user name"
+                            value={this.state.userName}
+                            onChange={this.onChange}
+                        />
+                    </div>
+                    <div className="formFields">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            className="Register"
+                            type="text"
+                            name="password"
+                            placeholder="Enter a password"
+                            value={this.state.password}
+                            onChange={this.onChange}
+                        />
+                    </div>
+                    <div className="formFields">
+                        <label htmlFor="email">email</label>
+                        <input
+                            className="Register"
+                            type="text"
+                            name="email"
+                            placeholder="Enter a valid email"
+                            value={this.state.email}
+                            onChange={this.onChange}
+                        />
+                    </div>
+
+                    <div className="formFields">
+                        <label htmlFor="address">Address</label>
+                        <input
+                            className="Register"
+                            type="text"
+                            name="address"
+                            placeholder="Enter an address"
+                            value={this.state.address}
+                            onChange={this.onChange}
+                        />
+                    </div>
+                    <div className="formFields">
+                        <label htmlFor="country">Country</label>
+                        <select 
+                        className="Register"
+                        type="text"
+                        name="country"
+                        placeholder="select a country"
+                        value={this.state.country}
+                        onChange={this.onChange}
+                        >
+
+                            <option>Spain</option>
+
+                            <option>China</option>
+
+                            <option>France</option>
+
+                        </select>
+                    </div>
+                    <div className="formFields">
+                        <label htmlFor="creditcard_number">Creditcard Number</label>
+                        <input
+                            className="Register"
+                            type="text"
+                            name="creditcardNumber"
+                            placeholder="Enter a creditcard number"
+                            value={this.state.creditcardNumber}
+                            onChange={this.onChange}
+                        />
+                    </div>
+                    <div className="formFields">
+                        <label htmlFor="creditcardType">Creditcard type</label>
+                        <select 
+                        className="Register"
+                        type="text"
+                        name="creditcardType"
+                        placeholder="Enter a password"
+                        value={this.state.creditcardType}
+                        onChange={this.onChange}
+                        name="transporte">
+
+                            <option>Mastercard</option>
+
+                            <option>Visa</option>
+
+                            <option>Maestro</option>
+
+                        </select>
+                    </div>
+
+                    <button
+                        type="submit"
+                    >
+                        Register
                             </button>
-                        </form>
-                 */}
-                 <Form>
+                </form>
+
+                {/* <Form className='registerForm'>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridEmail">
                             <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" placeholder="Enter email" />
+                            <Form.Control value={fields.email} type="email" placeholder="Enter email" />
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPassword">
                             <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control  value={fields.email} type="password" placeholder="Password" />
                         </Form.Group>
                     </Form.Row>
 
                     <Form.Group controlId="formGridAddress">
                         <Form.Label>Address</Form.Label>
-                        <Form.Control placeholder="1234 Main St" />
+                        <Form.Control  value={fields.email} placeholder="1234 Main St" />
                     </Form.Group>
 
                     <Form.Group controlId="formGridCreditcard">
                         <Form.Label>Creditcard Number</Form.Label>
-                        <Form.Control placeholder="Apartment, studio, or floor" />
+                        <Form.Control  value={fields.email} placeholder="Apartment, studio, or floor" />
                     </Form.Group>
 
                     <Form.Row>
-                        <Form.Group as={Col} controlId="formGridCountry">
-                            <Form.Label>Country</Form.Label>
-                            <Form.Control />
-                        </Form.Group>
+                        
 
                         <Form.Group as={Col} controlId="formGridState">
                             <Form.Label>State</Form.Label>
-                            <Form.Control as="select">
+                            <Form.Control  value={fields.email} as="select">
                                 <option>Choose...</option>
                                 <option>...</option>
                             </Form.Control>
@@ -166,18 +191,15 @@ class Register extends Component {
 
                         <Form.Group as={Col} controlId="formGridZip">
                             <Form.Label>Zip</Form.Label>
-                            <Form.Control />
+                            <Form.Control  value={fields.email} />
                         </Form.Group>
                     </Form.Row>
 
-                    <Form.Group id="formGridCheckbox">
-                        <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button click='onSubmit()' variant="primary" type="submit">
                         Submit
-  </Button>
-                </Form> 
+                    </Button>
+                </Form>  */}
             </div>
 
         )

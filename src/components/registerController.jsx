@@ -1,6 +1,7 @@
 import axios from 'axios'
 
 export const register = newUser =>{
+    console.log("entra aqui")
     return axios
         .post('http://localhost:3001/auth/register',{
             userName: newUser.userName,
