@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { register } from './registerController'
-import { Form, Button, Col } from 'react-bootstrap'
-import './Register.css'
+
+import './style/Register.css'
 
 
 
@@ -136,8 +136,7 @@ class Register extends Component {
                         name="creditcardType"
                         placeholder="Enter a password"
                         value={this.state.creditcardType}
-                        onChange={this.onChange}
-                        name="transporte">
+                        onChange={this.onChange}>
 
                             <option>Mastercard</option>
 

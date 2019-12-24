@@ -1,10 +1,9 @@
-import './Brand.css'
+import './style/Brand.css'
 import axios from 'axios';
 // import React from 'react';
 
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 
 class Brand extends Component {
     constructor() {
@@ -17,7 +16,7 @@ class Brand extends Component {
     }
     componentDidMount() {
 
-        axios.get('http://localhost:3001/product/brand')
+        axios.get('http://localhost:3001/product/br/fender')
             .then(item => {
 
 
@@ -43,7 +42,7 @@ class Brand extends Component {
 
 
     render() {
-        const elemento = this.state.items
+        // const elemento = this.state.items
         // v2005-06-01
 
 

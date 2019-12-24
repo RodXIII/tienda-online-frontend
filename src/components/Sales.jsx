@@ -1,5 +1,5 @@
 
-import './Sales.css'
+import './style/Sales.css'
 import axios from 'axios';
 
 import React, { Component } from 'react';
@@ -38,8 +38,6 @@ class Sales extends Component {
                     productsNumber: arraySales.length
 
                 })
-               
-                console.log(this.state.productsNumber)
 
             })
             .catch(err => { console.log(err) })
@@ -60,7 +58,6 @@ class Sales extends Component {
     }
     }
     decreaseIndex = (e) => {
-      console.log(this.state.i)
         if (this.state.i > 0) {
             this.setState({
                 i: (this.state.i) - 1,
@@ -75,15 +72,14 @@ class Sales extends Component {
     }
     render() {
         const elemento = this.state.items
-        console.log(this.state.productsNumber)
-        console.log(elemento.length)
+        
         // v2005-06-01
 
 
         // console.log(elemento)
         // console.log((elemento) ? elemento[0].image : '')
 
-        if (elemento.length==this.state.productsNumber) {
+        if (elemento.length===this.state.productsNumber) {
             const arrayImg=elemento[this.state.i].image.split("150x150")
             let bigImg=`${arrayImg[0]}300x300${arrayImg[1]}`
             return (
@@ -97,11 +93,11 @@ class Sales extends Component {
                    
                     <div className='saleCard' >
         
-                        <img src={bigImg} />
+                        <img alt ="item" src={bigImg} />
                         <div className='salesDetail'>
-                        <p><h2>{elemento[this.state.i].brand} </h2></p>
-                            <p><h4>{elemento[this.state.i].name}</h4> </p>
-                            <p><h1 className="price">{elemento[this.state.i].price} € </h1></p>
+                        <h2>{elemento[this.state.i].brand} </h2>
+                            <h4>{elemento[this.state.i].name}</h4> 
+                            <h1 className="price">{elemento[this.state.i].price} € </h1>
                           <img className="saleTag"  src=" https://www.digdevdirect.com/wp-content/uploads/2017/06/SALE.jpg" alt=""/> 
                         </div>
                     </div>

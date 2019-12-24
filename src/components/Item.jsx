@@ -1,11 +1,10 @@
-// import React, { Component } from 'react'
-import './Item.css'
+
+import './style/Item.css'
 import axios from 'axios';
-// import React from 'react';
 
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+
 
 class Item extends Component {
     constructor() {
@@ -94,8 +93,8 @@ class Item extends Component {
                     {/* <button onClick={this.increaseIndex}></button> */}
                     <div className='productCard' onClick={this.increaseIndex} >
                     
-                        <img  src={elemento[this.state.z].image} />
-                        <img className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130882.png" alt=""/>
+                        <img alt="right item"  src={elemento[this.state.z].image} />
+                        <img alt="right arrow" className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130882.png" />
                             <h4>{elemento[this.state.z].brand} </h4>
                             <h5>{elemento[this.state.z].name} </h5>
                             <h4 className="price">{elemento[this.state.z].price} € </h4>
@@ -104,7 +103,7 @@ class Item extends Component {
                    
                     <div className='productCard' id='selectedProduct'>
                         <div className='imageContainer'>
-                        <   img src={elemento[this.state.y].image} />
+                        <   img alt="center item" src={elemento[this.state.y].image} />
                         </div>
                             <h4>{elemento[this.state.y].brand} </h4>
                             <h5>{elemento[this.state.y].name} </h5>
@@ -114,8 +113,8 @@ class Item extends Component {
                     
 
                     <div className='productCard' onClick={this.decreaseIndex}>
-                    <img className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130884.png" alt=""/>
-                        <img  src={elemento[this.state.i].image}  />
+                    <img alt="left arrow " className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130884.png"/>
+                        <img alt="left item " src={elemento[this.state.i].image}  />
                             <h4>{elemento[this.state.i].brand} </h4>
                             <h5>{elemento[this.state.i].name} </h5>
                             <h4 className="price">{elemento[this.state.i].price} € </h4>

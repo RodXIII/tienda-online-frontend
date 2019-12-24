@@ -3,10 +3,10 @@
    border-width: 0.5;
 }
 .logoName{
-    margin:2rem;
+    margin:2rem 0 2rem 2rem ;
 }
 .logo{
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
     height: 5rem;
     width: 5rem;
 }

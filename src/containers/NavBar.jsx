@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import './NavBar.css'
-import { Nav } from 'react-bootstrap'
+import React from 'react'
+// import React, { Component } from 'react'
+// import { Link, withRouter } from 'react-router-dom'
+import './style/NavBar.css'
+// import { Nav } from 'react-bootstrap'
 import Paper from '@material-ui/core/Paper';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+
 
 
 export default function DisabledTabs() {
@@ -20,7 +22,7 @@ export default function DisabledTabs() {
         value={value}
         indicatorColor="primary"
         textColor="primary"
-        onChange={handleChange}
+        // onChange={handleChange}
         aria-label="disabled tabs example"
       >
         <Tab label="Home" href="/" />
@@ -28,9 +30,7 @@ export default function DisabledTabs() {
         <Tab label="Register" href="/register" />
         <Tab label="Login" href="/login" />
         <Tab label="Logout" href="/logout" />
-        
         <Tab label="Profile" href="/profile" />
-
       </Tabs>
     </Paper>
   );
