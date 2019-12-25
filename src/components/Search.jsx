@@ -20,7 +20,7 @@ class Search extends Component {
             axios.get('http://localhost:3001/product/search/'+this.search.value)
             .then(element => {
               console.log("query realizada") 
-                this.props.getProductList(element)
+                this.props.getProductList(element.data)
             })
             .catch(err => { console.log('ha habido un error'+err) })   
     }

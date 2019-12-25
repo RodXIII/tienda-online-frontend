@@ -6,7 +6,8 @@ class ProductList extends Component{
    }
 
   render(){
-      
+      console.log("entra aquiiiiiiiiii")
+      console.log(this.props.sendList)
     let item= ''
     if(this.props.sendList.data){
         item = this.props.sendList.data.map(element=>
@@ -17,7 +18,16 @@ class ProductList extends Component{
             <h1>{element.price}€</h1>
         </div>
         )    
-    }   
+    }else{
+        item = this.props.sendList.map(element=>
+            <div className="searchCard">
+                <img src={element.image}/>
+                <h2>{element.name}</h2>
+                <h4>{element.brand}</h4>
+                <h1>{element.price}€</h1>
+            </div>
+            )    
+    }
      
     return (
     <div className="searchItemsCointainer">

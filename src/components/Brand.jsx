@@ -1,9 +1,6 @@
 import './style/Brand.css'
 import axios from 'axios';
-// import React from 'react';
-
-import React, { Component } from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { Component } from 'react';;
 
 class Brand extends Component {
     constructor() {
@@ -17,7 +14,7 @@ class Brand extends Component {
 
         axios.get(`http://localhost:3001/product/br/${brand}`)
             .then(item => {
-                console.log(item)
+                
                 var array = item.data
                 var i = array.length;
                 while (i--) {
@@ -26,10 +23,7 @@ class Brand extends Component {
                     array[i] = array[j];
                     array[j] = tmp;
                 }
-                this.setState({
-                    items: array
-                })
-
+                this.props.getProductList(array)
             })
             .catch(err => { console.log(err) })
 
@@ -58,8 +52,9 @@ class Brand extends Component {
                     <div className='brandName' onClick={()=>this.getProductsBrand('pearl')}>
                         <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/pearl.gif" alt="" />
                     </div>
+                    
                 </span>
-
+                
                 );
     
             }
