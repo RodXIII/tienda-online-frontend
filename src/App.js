@@ -36,12 +36,12 @@ class App extends Component{
         <div >
           <Header/>
           <NavBar />
-          <switch>
+          
           <Route exact path="/" component={Home}/>        
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} /> 
           <Route exact path="/logout" component={Logout} /> 
-          </switch>
+        
          </div>
       </Router>
       

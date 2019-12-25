@@ -7,19 +7,17 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 class Brand extends Component {
     constructor() {
-
         super();
-        this.state = {
-
+        this.state={
+            items :[]
         }
 
     }
-    componentDidMount() {
+    getProductsBrand(brand) {
 
-        axios.get('http://localhost:3001/product/br/fender')
+        axios.get(`http://localhost:3001/product/br/${brand}`)
             .then(item => {
-
-
+                console.log(item)
                 var array = item.data
                 var i = array.length;
                 while (i--) {
@@ -32,44 +30,32 @@ class Brand extends Component {
                     items: array
                 })
 
-
             })
             .catch(err => { console.log(err) })
 
     }
 
-
-
-
     render() {
-        // const elemento = this.state.items
-        // v2005-06-01
-
-
-        // console.log(elemento)
-        // console.log((elemento) ? elemento[0].image : '')
-
-
-
+       
         return (
-            // <Carousel className='section'>
+  
             <span className='brandSection'>
-                <div className='brandName'>
+                <div className='brandName' onClick={()=>this.getProductsBrand('fender')}>
                     <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/fender.gif" alt="" />
                 </div>
-                <div className='brandName'>
+                <div className='brandName' onClick={()=>this.getProductsBrand('ibanez')}>
                     <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/ibanez.gif" alt="" />
                 </div>
-                <div className='brandName'>
+                <div className='brandName' onClick={()=>this.getProductsBrand('yamaha')}>
                     <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/yamaha.gif" alt="" />
                 </div>
-                <div className='brandName'>
+                <div className='brandName' onClick={()=>this.getProductsBrand('korg')}>
                     <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/korg.gif" alt="" />
                 </div>
-                <div className='brandName'>
+                <div className='brandName' onClick={()=>this.getProductsBrand('gibson')}>
                     <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/gibson.gif" alt="" />
                 </div>
-                    <div className='brandName'>
+                    <div className='brandName' onClick={()=>this.getProductsBrand('pearl')}>
                         <img src="https://thumbs.static-thomann.de/thumb/thumb100x46/pics/herstlogos/pearl.gif" alt="" />
                     </div>
                 </span>

@@ -1,14 +1,8 @@
 
-
-// import React, { Component } from 'react'
 import './style/Search.css'
 import axios from 'axios';
-// import ProductList from './ProductList'
-// import React from 'react';
-
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
 
 class Search extends Component {
     constructor(props) {
@@ -21,28 +15,19 @@ class Search extends Component {
 
     }
     handleInputChange(e){
+        e.preventDefault()
         console.log("entra en la funcion")
-            // axios.get('http://localhost:3001/product/search/'+this.search.value)
-            // .then(element => {
-            //   console.log("query realizada")
-              
-            //     // this.setState({
-            //     //     item: element
-            //     // })
-                
-                
-               
-            // })
-            // .catch(err => { console.log('ha habido un error'+err) })
-        
-            this.props.mostrarFrase()
+            axios.get('http://localhost:3001/product/search/'+this.search.value)
+            .then(element => {
+              console.log("query realizada") 
+                this.props.getProductList(element)
+            })
+            .catch(err => { console.log('ha habido un error'+err) })   
     }
 
     render() {
         
-        
-            return (  
-                      
+            return (              
                 <div>
                 <form className='searchContainer'>
                     <input
@@ -54,8 +39,6 @@ class Search extends Component {
                     />
                     <button onClick={this.handleInputChange.bind(this)}>search</button>
                 </form>
-            {/* <p>{this.state.item.data[0].name}</p>
-                <ProductList products={this.state.item.data}/> */}
                 </div>
             )
         

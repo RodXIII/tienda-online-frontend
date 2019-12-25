@@ -1,45 +1,31 @@
-// import React, { Component } from 'react';
-// // import Search from './components/Search'
+import React, { Component } from 'react';
 
+class ProductList extends Component{
+   constructor(props){
+       super(props);
+   }
 
-// class ProductList extends Component{
-//    constructor(props){
-//        super(props);
-//        this.state={
-//            element:[]
-//        }
-//    }
-//    handleList(props){
-//        console.groupCollapsed("entra en handlelist")
-//     let items = props.map(item => <li>{ item }</li> );
-//     this.setState({
-
-//         element: items
-        
-//     })
-//     console.log("las props son: "+props)
-    
-//    }
-//   render(){
+  render(){
       
-//     //   this.handleList(this.props.products)
-//     let items=this.props.products
-  
-//     let element=items.map(item => <p>{ item }</p> );
-//     console.log("items are "+element)
-      
+    let item= ''
+    if(this.props.sendList.data){
+        item = this.props.sendList.data.map(element=>
+        <div className="searchCard">
+            <img src={element.image}/>
+            <h2>{element.name}</h2>
+            <h4>{element.brand}</h4>
+            <h1>{element.price}€</h1>
+        </div>
+        )    
+    }   
+     
+    return (
+    <div className="searchItemsCointainer">
+        {item}
+    </div>
+    );
+      }
     
-    
-//     return (
-//     <div className="searchItemsCointainer">
-//         {/* <ul>
-//           <p>{element.name}</p>
-//         </ul> */}
-//             {element[0].name}
-//     </div>
-//     );
-//       }
-    
-// }  
+}  
 
-// export default ProductList;
+export default ProductList;

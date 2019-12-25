@@ -79,18 +79,13 @@ class Item extends Component {
     }
     render() {
         const elemento = this.state.items
-        // v2005-06-01
-
-
-        // console.log(elemento)
-        // console.log((elemento) ? elemento[0].image : '')
-
+        
         if (elemento[999]) {
 
             return (
-                // <Carousel className='section'>
+                
                 <div className='section'>
-                    {/* <button onClick={this.increaseIndex}></button> */}
+                    
                     <div className='productCard' onClick={this.increaseIndex} >
                     
                         <img alt="right item"  src={elemento[this.state.z].image} />
@@ -120,7 +115,6 @@ class Item extends Component {
                             <h4 className="price">{elemento[this.state.i].price} € </h4>
                      
                     </div  >
-                    {/* <button onClick={this.decreaseIndex}></button> */}
                 </div>
 
             );

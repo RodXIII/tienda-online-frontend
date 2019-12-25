@@ -1,5 +1,6 @@
 .mainContainer{
     display:flex;
+    flex-direction: row;
     justify-content: flex-start;
     margin-left:0.5rem !important;
     margin-right:0.5rem !important;
@@ -11,5 +12,17 @@
     flex-direction: row;
     margin-left: 5rem
    
+}
+
+.searchCard{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: flex-start;
+    border-style: solid;
+    border-color: grey;
+    border-width: 0.1rem;
+    margin: 1rem;
+    padding: 1rem;
 }
 
