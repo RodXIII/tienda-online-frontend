@@ -6,11 +6,18 @@
     margin-right:0.5rem !important;
     width: 100vw;
 }
+.beatlesImg{
+    width: 30rem;
+    height: 20rem;
+    margin: 3rem;
+}
 .banner{
     padding: 1rem;
     display: flex;
     flex-direction: row;
-    margin-left: 5rem
+   
+    justify-content: center;
+    align-items: center;
    
 }
 
@@ -24,5 +31,23 @@
     border-width: 0.1rem;
     margin: 1rem;
     padding: 1rem;
+}
+
+.playerContainer{
+    display: flex;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+iframe{
+    width: 90%;
+    height: 40rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+    margin-bottom: 2rem;
+    overflow: hidden;
+
 }
 

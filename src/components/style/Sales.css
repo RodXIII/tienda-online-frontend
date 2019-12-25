@@ -1,6 +1,11 @@
 .salesContainer{
     display:flex;
     flex-direction: row;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   width: 55rem;
+   margin: 2rem 0 2rem  2rem ;
+  
     
 }
 
@@ -24,4 +29,9 @@
 .saleTag{
     width: 12rem;
     height: 6rem;
+}
+.button{
+   
+   
+    border-radius: 5px; 
 }

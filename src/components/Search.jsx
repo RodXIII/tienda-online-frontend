@@ -37,7 +37,7 @@ class Search extends Component {
                         // onChange={this.handleInputChange}
                         // onKeyDown={this.handleInputChange}
                     />
-                    <button onClick={this.handleInputChange.bind(this)}>search</button>
+                    <button className="searchButton" onClick={this.handleInputChange.bind(this)}>search</button>
                 </form>
                 </div>
             )

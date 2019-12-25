@@ -7,8 +7,10 @@
     align-items: center;
     justify-content: center;
     border-style: solid;
+    border-color: grey;
     border-width: 0.1rem;
     border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
 }
 
 .brandName{
@@ -19,4 +21,6 @@
     justify-content: center;
     margin:0.5rem;
     padding:0.1rem;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
 }

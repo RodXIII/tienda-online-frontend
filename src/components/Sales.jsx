@@ -73,19 +73,11 @@ class Sales extends Component {
     render() {
         const elemento = this.state.items
         
-        // v2005-06-01
-
-
-        // console.log(elemento)
-        // console.log((elemento) ? elemento[0].image : '')
-
         if (elemento.length===this.state.productsNumber) {
             const arrayImg=elemento[this.state.i].image.split("150x150")
             let bigImg=`${arrayImg[0]}300x300${arrayImg[1]}`
             return (
-                // <Carousel className='section'>
-                    
-          
+               
                   <div className='salesContainer'>
                         
                       <button onClick={this.increaseIndex} className='button'></button>

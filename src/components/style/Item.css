@@ -11,11 +11,8 @@
     filter:brightness(0.4);
 
 }
-.imageContainer{
-    background-color:white;
- 
 
-}
+
 .section{
     margin:1rem;
     display:flex;
@@ -26,7 +23,7 @@
     width: 60%;
    justify-content: center;
    border-radius: 5px;
-  
+   box-shadow: 2px 2px 5px #999;
 
 }
 #selectedProduct{
@@ -35,7 +32,7 @@
     color:white;
     border-style: solid;
     border-width: 0.01ch;
-    border-color:black;
+    /* border-color:black; */
     
   
     opacity:100%;
@@ -55,8 +52,10 @@ button{
     background-color: white;
     width: 5rem;
 } 
-img{
+.productImage{
+    box-shadow: 2px 2px 5px #999;
     margin-bottom:1rem;
+    border-radius: 5px;
 }
 
 .price{

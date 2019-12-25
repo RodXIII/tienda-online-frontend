@@ -5,15 +5,53 @@
     height: 6rem;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     
 }
 
-a{
+/* a{
     height:3rem;
     margin: 3rem;
     
+} */
+.dropDown{
+    margin-top: 10px;         
 }
 
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+   
+    }
+   
+nav li{
+    display:inline-block;
+    width:150px;
+    height:30px;
+    padding:5px 10px;
+    background: linear-gradient(to bottom, #D3CCE3, #E9E4F0);
+    /* border:1px solid #000; */
+    text-align:center;
+    color:#66647C;
+    position:relative;
+}
+          
+nav li:hover{
+    background-color:#DED8EA;
+    color:white;
+    }
+          
+nav li>ul{
+    display:none;
+    }
+
+nav li:hover>ul{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:30px;
+    left:0px;
+}
 
