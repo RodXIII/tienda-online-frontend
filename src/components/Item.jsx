@@ -88,11 +88,11 @@ class Item extends Component {
                     
                     <div className='productCard' onClick={this.increaseIndex} >
                     
-                        <img className="productImage" alt="right item"  src={elemento[this.state.z].image} />
+                        <img className="productImage" alt="right item"  src={elemento[this.state.i].image} />
                         <img alt="right arrow" className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130882.png" />
-                            <h4>{elemento[this.state.z].brand} </h4>
-                            <h5>{elemento[this.state.z].name} </h5>
-                            <h4 className="price">{elemento[this.state.z].price} € </h4>
+                            <h4>{elemento[this.state.i].brand} </h4>
+                            <h5>{elemento[this.state.i].name} </h5>
+                            <h4 className="price">{elemento[this.state.i].price} € </h4>
                      
                     </div>
                    
@@ -109,10 +109,10 @@ class Item extends Component {
 
                     <div className='productCard' onClick={this.decreaseIndex}>
                     <img alt="left arrow " className='imageArrow'src="https://image.flaticon.com/icons/png/512/130/130884.png"/>
-                        <img className="productImage" alt="left item " src={elemento[this.state.i].image}  />
-                            <h4>{elemento[this.state.i].brand} </h4>
-                            <h5>{elemento[this.state.i].name} </h5>
-                            <h4 className="price">{elemento[this.state.i].price} € </h4>
+                        <img className="productImage" alt="left item " src={elemento[this.state.z].image}  />
+                            <h4>{elemento[this.state.z].brand} </h4>
+                            <h5>{elemento[this.state.z].name} </h5>
+                            <h4 className="price">{elemento[this.state.z].price} € </h4>
                      
                     </div  >
                 </div>

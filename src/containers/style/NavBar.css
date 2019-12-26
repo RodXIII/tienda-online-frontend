@@ -1,7 +1,7 @@
 
 
 .menu{
-    background: linear-gradient(to bottom, #D3CCE3, #E9E4F0);
+    background: linear-gradient(to bottom, grey, #E9E4F0);
     height: 6rem;
     display:flex;
     flex-direction: row;
@@ -9,6 +9,9 @@
     align-items: center;
     
 }
+/* .MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected{
+    color:white
+} */
 
 /* a{
     height:3rem;
@@ -31,11 +34,13 @@ nav li{
     width:150px;
     height:30px;
     padding:5px 10px;
-    background: linear-gradient(to bottom, #D3CCE3, #E9E4F0);
+    background: linear-gradient(to bottom, grey, #E9E4F0);
     /* border:1px solid #000; */
     text-align:center;
     color:#66647C;
     position:relative;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
 }
           
 nav li:hover{

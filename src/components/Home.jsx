@@ -38,7 +38,7 @@ class Home extends Component {
                     <Item />
                     <Brand getProductList={this.getProductList.bind(this)}/>
                 </div>
-                <p className="banner"><img src="http://www.allaboutcandc.com/uploads/1/0/4/6/10465076/published/great-deal-logo-header-8-18_1.png?1534784895" alt="" /></p>
+                <p className="banner"><img className="saleImg" src="http://www.allaboutcandc.com/uploads/1/0/4/6/10465076/published/great-deal-logo-header-8-18_1.png?1534784895" alt="" /></p>
                 <div className="playerContainer">
                 
                     <Sales />

@@ -16,6 +16,14 @@
     justify-content: center;
     align-items: center;
 }
+.saleCard:hover{
+    width: 50rem;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 50%;
+}
 
 .salesDetail{
     width: 10rem;

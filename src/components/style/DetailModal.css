@@ -1,0 +1,24 @@
+
+.modalContainer{
+    display:flex;
+    
+}
+
+.detailContainer{
+    padding:2rem;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+}
+
+.imageModal{
+    
+    border-radius: 5px;
+    height: 10rem;
+    width: 10rem; 
+}
+.imageContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

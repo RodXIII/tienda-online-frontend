@@ -13,6 +13,7 @@
     box-shadow: 2px 2px 5px #999;
 }
 
+
 .brandName{
     display:flex;
    border-style: solid;
@@ -23,4 +24,17 @@
     padding:0.1rem;
     border-radius: 5px;
    box-shadow: 2px 2px 5px #999;
+}
+
+.brandName:hover{
+    display:flex;
+   border-style: solid;
+   border-width: 0.2rem;
+   align-items: center;
+    justify-content: center;
+    margin:0.5rem;
+    padding:0.1rem;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   opacity: 50%;
 }
