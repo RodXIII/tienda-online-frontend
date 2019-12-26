@@ -30,7 +30,7 @@
 
 .searchCard{
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(6,1fr);
     align-items: center;
     justify-content: center;
     border-style: solid;
@@ -58,5 +58,12 @@ iframe{
     margin-bottom: 2rem;
     overflow: hidden;
 
+}
+#priceTag{
+    box-shadow: 2px 2px 5px #999;
+    margin-bottom: 2rem;
+    margin:1rem;
+    height: 3rem;
+    width: 8rem;
 }
 

@@ -22,7 +22,7 @@ class Home extends Component {
         this.setState({
             element: element
         })
-        console.log(this.state.element)
+       
     }
     
     render() {
