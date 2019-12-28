@@ -1,7 +1,7 @@
 
 import './style/Item.css'
 import axios from 'axios';
-
+import SimpleModal from './DetailModal'
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -60,7 +60,7 @@ class Item extends Component {
     }
     }
     decreaseIndex = (e) => {
-      
+      console.log(this.state.items.length)
         if (this.state.i > 0) {
             this.setState({
                 i: (this.state.i) - 1,
@@ -69,9 +69,9 @@ class Item extends Component {
             })
         } else {
             this.setState({
-                i: 997,
-                y: 998,
-                z: 999
+                i: this.state.items.length-3,
+                y: this.state.items.length-2,
+                z: this.state.items.length-1
             })
 
         }
@@ -80,8 +80,8 @@ class Item extends Component {
     render() {
         const elemento = this.state.items
         
-        if (elemento[999]) {
-
+        if (elemento.length>0) {
+ 
             return (
                 
                 <div className='section'>
@@ -98,11 +98,12 @@ class Item extends Component {
                    
                     <div className='productCard' id='selectedProduct'>
                     
-                        <   img className="productImage" alt="center item" src={elemento[this.state.y].image} />
+                        <   img  className="productImage" alt="center item" src={elemento[this.state.y].image} />
                         
                             <h4>{elemento[this.state.y].brand} </h4>
                             <h5>{elemento[this.state.y].name} </h5>
                             <h4 className="price">{elemento[this.state.y].price} € </h4>
+                            <SimpleModal productDetails={elemento[this.state.y]} productArray={elemento} />
                       
                     </div>
                     

@@ -6,9 +6,11 @@ import NavBar from './containers/NavBar'
 import Home from './components/Home'
 import Register from './components/RegisterForm'
 import Login from './components/LoginForm'
-
+import ProfileMenu from './containers/ProfileMenu'
 import Logout from './components/LogoutForm'
 import Header from './containers/Header'
+import Profile from './components/Profile'
+import Invoice from './components/Invoice'
 
 
 
@@ -24,7 +26,7 @@ class App extends Component{
 }
   outputEvent() {
     // the event context comes from the Child
-    console.log("aqui tambien joder")
+
     this.setState({ count: this.state.count++ });
   }
   
@@ -41,6 +43,10 @@ class App extends Component{
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} /> 
           <Route exact path="/logout" component={Logout} /> 
+          <Route exact path="/profile" component={Profile} /> 
+          <Route exact path="/profileData" component={Profile} />
+          <Route exact path="/profile/invoice" component={Invoice} />
+          <Route exact path="/profile/purchase" />
         
          </div>
       </Router>

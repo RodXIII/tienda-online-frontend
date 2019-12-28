@@ -153,52 +153,7 @@ class Register extends Component {
                         Register
                             </button>
                 </form>
-
-                {/* <Form className='registerForm'>
-                    <Form.Row>
-                        <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control value={fields.email} type="email" placeholder="Enter email" />
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridPassword">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control  value={fields.email} type="password" placeholder="Password" />
-                        </Form.Group>
-                    </Form.Row>
-
-                    <Form.Group controlId="formGridAddress">
-                        <Form.Label>Address</Form.Label>
-                        <Form.Control  value={fields.email} placeholder="1234 Main St" />
-                    </Form.Group>
-
-                    <Form.Group controlId="formGridCreditcard">
-                        <Form.Label>Creditcard Number</Form.Label>
-                        <Form.Control  value={fields.email} placeholder="Apartment, studio, or floor" />
-                    </Form.Group>
-
-                    <Form.Row>
-                        
-
-                        <Form.Group as={Col} controlId="formGridState">
-                            <Form.Label>State</Form.Label>
-                            <Form.Control  value={fields.email} as="select">
-                                <option>Choose...</option>
-                                <option>...</option>
-                            </Form.Control>
-                        </Form.Group>
-
-                        <Form.Group as={Col} controlId="formGridZip">
-                            <Form.Label>Zip</Form.Label>
-                            <Form.Control  value={fields.email} />
-                        </Form.Group>
-                    </Form.Row>
-
-
-                    <Button click='onSubmit()' variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>  */}
+    
             </div>
 
         )

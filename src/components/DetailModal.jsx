@@ -46,7 +46,9 @@ export default function SimpleModal(props) {
         setOpen(false);
     };
     const getRelatedProducts = (items) => {
-        var array = items
+       
+        if(items.length){ 
+            var array = items
                 var i = array.length;
                 while (i--) {
                     let j = Math.floor(Math.random() * (i + 1));
@@ -54,7 +56,12 @@ export default function SimpleModal(props) {
                     array[i] = array[j];
                     array[j] = tmp;
                 }
-        return array
+                return array
+            }else{
+                var array=items;
+                return array
+            }
+        
     };
 
     const related = getRelatedProducts(props.productArray)
@@ -90,7 +97,7 @@ export default function SimpleModal(props) {
                             <button>Add to basket</button>
                         </div>
                         </div>
-                        <h3>RELATED PRODUCTS</h3>
+                        <h3 className="relatedTitle">RELATED PRODUCTS</h3>
                         <div className="relatedProducts">
                             
                             <ProductList sendList={related} />

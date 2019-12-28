@@ -1,7 +1,7 @@
 
 import './style/Sales.css'
 import axios from 'axios';
-
+import SimpleModal from './DetailModal'
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -90,6 +90,7 @@ class Sales extends Component {
                         <h2>{elemento[this.state.i].brand} </h2>
                             <h4>{elemento[this.state.i].name}</h4> 
                             <h1 className="price">{elemento[this.state.i].price} € </h1>
+                            <SimpleModal productDetails={elemento[this.state.i]} productArray={elemento} />
                           <img className="saleTag"  src=" https://www.digdevdirect.com/wp-content/uploads/2017/06/SALE.jpg" alt=""/> 
                         </div>
                     </div>

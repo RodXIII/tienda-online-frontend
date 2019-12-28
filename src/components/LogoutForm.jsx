@@ -8,7 +8,7 @@ class Logout extends Component {
         e.preventDefault()
 
         logout().then(res => {
-            localStorage.removeItem("token");
+            localStorage.clear();
             console.log('Token removed')
         })
     }
