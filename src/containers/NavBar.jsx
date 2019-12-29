@@ -25,7 +25,7 @@ export default function DisabledTabs() {
         <Tab label="Login" href="/login" />
         <Tab label="Logout" href="/logout" />
         <Tab label="Profile" href="/profile" /> 
-        <Tab label="Shopping Basquet" href="#" /> 
+        <Tab label="Shopping Cart" href="/cart" /> 
       </Tabs>
       <nav>
         <ul>

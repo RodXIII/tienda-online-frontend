@@ -8,10 +8,13 @@ export const login = loginUser =>{
             password: loginUser.password
         })
         .then(res => {
+            console.log(res.data)
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('userId', res.data.user.id)
-            console.log(localStorage.getItem('token'))
-            console.log(res.data)
+            localStorage.setItem('role', res.data.user.roleId)
+            const cart=[]
+            localStorage.setItem('cart',JSON.stringify(cart) )
+            
             console.log('Login OK')
            
         })

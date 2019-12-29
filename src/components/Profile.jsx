@@ -20,11 +20,11 @@ class Profile extends Component {
             Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-            .then(item => {
+            .then(user => {
                 this.setState({
-                    userData:item.data
+                    userData:user.data
                 })
-                console.log(item.data)
+                console.log(user.data)
             })
             .catch(err => { console.log(err) })
 

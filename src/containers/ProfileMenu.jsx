@@ -10,7 +10,27 @@ export default function DisabledTabs() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  
+  if(localStorage.getItem('role') == 1){
+    console.log("entra en el menu admin")
+  return (
+    <Paper square className="profileMenu">
+      <Tabs
+        value={value}
+        indicatorColor="primary"
+        textColor="primary"
+        // onChange={handleChange}
+        aria-label="disabled tabs example"
+      >
+        <Tab label="Admin" href="/profileData" />
+        <Tab label="Invoice" href="/profile/invoice" />
+        <Tab label="Purchase History" href="/profile/purchases" />
+        <Tab label="Edit Product" href="/profile/edit" />
+       </Tabs>
+    </Paper>
+  );
+}else{
+  console.log("entra en el menu normal")
   return (
     <Paper square className="profileMenu">
       <Tabs
@@ -26,4 +46,5 @@ export default function DisabledTabs() {
        </Tabs>
     </Paper>
   );
+  }
 }

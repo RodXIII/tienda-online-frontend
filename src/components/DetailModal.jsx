@@ -63,6 +63,13 @@ export default function SimpleModal(props) {
             }
         
     };
+   const addBasket=(item)=>{
+        const shoppingCart=JSON.parse(localStorage.getItem('cart'))
+        console.log(shoppingCart)
+        shoppingCart.push(item)
+        localStorage.setItem('cart', JSON.stringify(shoppingCart))
+       console.log(item)
+   };
 
     const related = getRelatedProducts(props.productArray)
 
@@ -94,7 +101,7 @@ export default function SimpleModal(props) {
                             <p id="simple-modal-description">
                                 {props.productDetails.description}
                             </p>
-                            <button>Add to basket</button>
+                            <button onClick={()=>addBasket(props.productDetails)}>Add to basket</button>
                         </div>
                         </div>
                         <h3 className="relatedTitle">RELATED PRODUCTS</h3>
