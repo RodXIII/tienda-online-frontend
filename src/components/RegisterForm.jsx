@@ -155,7 +155,7 @@ class Register extends Component {
                         </select>
                     </div>
 
-                    <button
+                    <button className="formButton"
                         type="submit"
                     >
                         Register

@@ -1,15 +1,15 @@
-.registerForm{
+.loginForm{
     display:flex;
     flex-direction: column;
     margin: 5rem 20rem 20rem 20rem;
     justify-content: center;
     border-radius: 5px;
    box-shadow: 2px 2px 5px #999;
-   padding: 4rem;
+   padding: 3rem;
     
 }
 
-.Register{
+.Login{
     margin: 0.5rem;
     border-radius: 5px;
     height: 2.5rem;
@@ -19,7 +19,6 @@
 .formFields{
     display:flex;
     flex-direction: column;
-    
 }
 
 .formButton{

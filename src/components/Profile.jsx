@@ -24,6 +24,7 @@ class Profile extends Component {
                 this.setState({
                     userData:user.data
                 })
+                localStorage.setItem('userName', this.state.userData.userName)
                 console.log(user.data)
             })
             .catch(err => { console.log(err) })
@@ -70,8 +71,8 @@ class Profile extends Component {
         }
         else{
             return(
-                <div>
-                    <span className='data'>Sorry, you need to login first</span>
+                <div className='profileContainer'>
+                    <h4 className='data'>Sorry, you need to be loged In to check your profile</h4>
                 </div>
             )
         }

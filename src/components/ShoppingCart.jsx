@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import './style/ShoppingCart.css'
 class ProductList extends Component{
    constructor(props){
        super(props);
@@ -93,23 +93,29 @@ class ProductList extends Component{
             <h3 className="details">{element.name}</h3>
             <h4 className="details">{element.brand}</h4>
             <h1 id="priceTag" className="details">{element.price}€</h1>
-            <button onClick={()=>this.deleteItem(element)}>Delete Item</button>
+            <button className="formButton" onClick={()=>this.deleteItem(element)}>Delete Item</button>
         </div>
         )  
     }  
-    
-     
-    return (
-    <div className="searchItemsCointainer">
-        <button onClick={()=>this.purchase()}>Buy Products</button>
-        <div>
-    <h3>TOTAL AMOUNT = {totalAmount}</h3>
+    console.log(localStorage.getItem('cart'))    
+     if(localStorage.getItem('cart')!=='[]'){
+        return (
+        <div className="shoppingCartContainer">
+            <button className="formButton" onClick={()=>this.purchase()}>Buy Products</button>
+            <div>
+            <h3>TOTAL AMOUNT: {totalAmount}€</h3>
         </div>
-        {item}
-    </div>
-    );
+            {item}
+        </div>
+        );
+      }else{
+          return(
+          <div  className="shoppingCartContainer">
+              <h3>No items added to the Shopping cart</h3>
+          </div>
+          )
       }
-    
+  }
 }  
 
 export default ProductList;
