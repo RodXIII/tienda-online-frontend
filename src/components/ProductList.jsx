@@ -7,11 +7,13 @@ class ProductList extends Component{
    }
 
    addBasket(item){
-        const shoppingCart=JSON.parse(localStorage.getItem('cart'))
-        console.log(shoppingCart)
-        shoppingCart.push(item)
-        localStorage.setItem('cart', JSON.stringify(shoppingCart))
-       console.log(item)
+       if(localStorage.getItem('cart')){
+            const shoppingCart=JSON.parse(localStorage.getItem('cart'))
+            console.log(shoppingCart)
+            shoppingCart.push(item)
+            localStorage.setItem('cart', JSON.stringify(shoppingCart))
+            console.log(item)
+       }
    }
   render(){
       
