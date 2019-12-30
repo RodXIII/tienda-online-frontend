@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { register } from './registerController'
+import { Redirect } from 'react-router'
+
 
 import './style/Register.css'
 
@@ -42,11 +44,17 @@ class Register extends Component {
         }
 
         register(newUser).then(res => {
-            console.log(res)
+            
+            
+                this.setState({
+                    redirect:true
+                })
+            
         })
     }
 
     render() {
+        if(!this.state.redirect){
         return (
 
             <div className='registerForm'>
@@ -157,6 +165,13 @@ class Register extends Component {
             </div>
 
         )
+        }else{
+            return(
+                <div>
+                  <Redirect to="/login" />
+                </div>
+            )
+        }
     }
 }
 

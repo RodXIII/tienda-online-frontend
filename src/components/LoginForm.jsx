@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { login } from './loginController'
+import { Redirect } from 'react-router'
 
 class Login extends Component {
     constructor() {
@@ -7,7 +8,8 @@ class Login extends Component {
         this.state = {
             email: '',
             password: '',
-            errors: {}
+            errors: {},
+            redirect: false
         }
 
         this.onChange = this.onChange.bind(this)
@@ -28,10 +30,14 @@ class Login extends Component {
 
         login(loginUser).then(res => {
             console.log(res)
+            this.setState({
+                redirect:true
+            })
         })
     }
 
     render() {
+        if (!localStorage.getItem('token')){
         return (
 
             <div>
@@ -63,6 +69,13 @@ class Login extends Component {
                 </form>
             </div>
         )
+        }else{
+            return(
+              <div>
+                <Redirect to="/profile" />
+              </div>
+            )
+        }
     }
 }
 
