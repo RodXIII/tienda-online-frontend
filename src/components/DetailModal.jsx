@@ -64,12 +64,14 @@ export default function SimpleModal(props) {
         
     };
    const addBasket=(item)=>{
-        const shoppingCart=JSON.parse(localStorage.getItem('cart'))
-        console.log(shoppingCart)
-        shoppingCart.push(item)
-        localStorage.setItem('cart', JSON.stringify(shoppingCart))
-       console.log(item)
-   };
+       if(localStorage.getItem('cart')){
+            const shoppingCart=JSON.parse(localStorage.getItem('cart'))
+            console.log(shoppingCart)
+            shoppingCart.push(item)
+            localStorage.setItem('cart', JSON.stringify(shoppingCart))
+            console.log(item)
+       }
+   };   
 
     const related = getRelatedProducts(props.productArray)
 
