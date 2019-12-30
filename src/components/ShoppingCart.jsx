@@ -98,7 +98,7 @@ class ProductList extends Component{
         )  
     }  
     console.log(localStorage.getItem('cart'))    
-     if(localStorage.getItem('cart')!=='[]'){
+     if(localStorage.getItem('cart')!=='[]' && localStorage.getItem('cart')){
         return (
         <div className="shoppingCartContainer">
             <button className="formButton" onClick={()=>this.purchase()}>Buy Products</button>
