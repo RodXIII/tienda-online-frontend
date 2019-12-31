@@ -12,6 +12,8 @@ import Header from './containers/Header'
 import Profile from './components/Profile'
 import Invoice from './components/Invoice'
 import ShoppingCart from './components/ShoppingCart'
+import Purchase from './components/Purchase'
+import CostumerInvoice from './components/CostumerInvoice'
 
 
 
@@ -47,7 +49,10 @@ class App extends Component{
           <Route exact path="/logout" component={Logout} /> 
           <Route exact path="/profile" component={Profile} /> 
           <Route exact path="/profileData" component={Profile} />
+          <Route exact path="/profile/purchases" component={Purchase} />
           <Route exact path="/profile/invoice" component={Invoice} />
+          <Route exact path="/profile/sales" />
+          <Route exact path="/profile/adminInvoice" component={CostumerInvoice} />
           
         
          </div>

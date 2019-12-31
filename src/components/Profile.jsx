@@ -32,6 +32,7 @@ class Profile extends Component {
         }   
     render() {
         if(localStorage.userId){
+            var date=new Date(this.state.userData.createdAt)
             return(
                
                 <div>
@@ -59,7 +60,7 @@ class Profile extends Component {
                             <span className='Tag'>C.C. type: </span>   <span className='data'>{this.state.userData.creditcardType}</span>
                         </div>
                         <div className='dataTag'>
-                            <span className='Tag'>Sign In Date: </span>   <span className='data'>{this.state.userData.createdAt}</span>
+                            <span className='Tag'>Sign In Date: </span>   <span className='data'>{date.getDay()}/{date.getMonth()}/{date.getFullYear()}</span>
                         </div>   
                         
                     </div>

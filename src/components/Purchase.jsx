@@ -1,6 +1,5 @@
-import './style/Invoice.css'
+import './style/Purchase.css'
 import axios from 'axios';
-// import SimpleModal from './DetailModal'
 import React, { Component } from 'react';
 import ProfileMenu from '../containers/ProfileMenu';
 import NameLogo from '../logos/name.jpg'
@@ -8,7 +7,7 @@ import Logo from '../logos/logo.png'
 
 
 
-class Invoice extends Component {
+class Purchase extends Component {
     constructor() {
         super();
         this.state={
@@ -16,6 +15,7 @@ class Invoice extends Component {
         }
     }
     componentDidMount() {
+        
        console.log(localStorage.getItem('userId'))
        var userId=localStorage.getItem('userId')
         axios.get(`http://localhost:3001/inv/myproducts/${userId}`,{headers: {
@@ -36,52 +36,35 @@ class Invoice extends Component {
         const invoicesArray=this.state.userData
         console.log(invoicesArray)
         if(invoicesArray!==[]){
+            //sort the array of pruchases by date
             invoicesArray.sort((a, b) =>{
                 a=new Date(a.createdAt)
                 b=new Date(b.createdAt)
                  return b - a
                 })
             var invoice=invoicesArray.map(element=>{
-
-            var date=new Date(element.createdAt)
-
-            var product=element.products.map(item=>
-            <div className="productInvoiceContainer">
-                <span className="invoiceP">Id: {item.id}</span>
-                <span className="invoiceP">{item.name}</span>
-                <span className="invoiceP">Quant: {item.Invoice_Product.Quantity}</span>
-                <span className="invoiceP">Price: {item.price}€</span>
-            </div>
-            )
-            return <div className="invoiceContainer">
-                <div className='invoiceLogoContainer'>
-                    <img className='invoiceLogoName' src={NameLogo} alt=""/>
-                    <img className='invoiceLogo' src={Logo} alt=""/>
-                    <div className="invoiceInfoContainer">
-                        <div>
-                        <p className="invoiceP">Invoice number: { element.id }</p>
-                        <p>Date: {date.getDay()}-{date.getMonth()}-{date.getFullYear()}</p>
-                        </div>
-                        
-                        <p> {localStorage.getItem('userName') }</p>
-                    </div>
-                </div>
                 
-                <p>PRODUCTS</p>
-                {product}
-                <p className="invoiceInfoContainer">Total: { element.totalAmount }€</p>  
-                <button>Print</button>
+            var date=new Date(element.createdAt)
+            var product=element.products.map(item=>
+            <div className="purchaseCard">
+                <img className src={item.image}></img>
+                <span className="purchaseDetail">{item.name}</span>
+                <span className="purchaseDetail">{item.brand}</span>
+                <span className="purchaseDetail">{item.Invoice_Product.Quantity}</span>
+                <span className="purchaseDetail">{item.price}€</span>
+            <span className="purchaseDetail">{date.getDay()}-{date.getMonth()}-{date.getFullYear()}</span>
             </div>
+            ) 
+            return product  
             })
             return(
                 <div>
                 <ProfileMenu/>
-                <div className="invoiceSection">
+                <div className="purchaseSection">
                     
-                    <h4>Invoices</h4>
+                    <h4>Purchases</h4>
                     <div>
-                        {invoice}
-                        
+                        {invoice} 
                     </div>
                 </div>   
                 </div>
@@ -98,4 +81,4 @@ class Invoice extends Component {
         }
     }
 }
-export default Invoice;
+export default Purchase;

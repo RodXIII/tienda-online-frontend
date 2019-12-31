@@ -14,7 +14,7 @@ export default function DisabledTabs() {
   if(localStorage.getItem('role') == 1){
     console.log("entra en el menu admin")
   return (
-    <Paper square className="profileMenu">
+    <Paper square className="adminMenu">
       <Tabs
         value={value}
         indicatorColor="primary"
@@ -23,8 +23,8 @@ export default function DisabledTabs() {
         aria-label="disabled tabs example"
       >
         <Tab label="Admin" href="/profileData" />
-        <Tab label="Invoice" href="/profile/invoice" />
-        <Tab label="Purchase History" href="/profile/purchases" />
+        <Tab label="Costumer Invoice" href="/profile/adminInvoice" />
+        <Tab label="Sales History" href="/profile/sales" />
         <Tab label="Edit Product" href="/profile/edit" />
        </Tabs>
     </Paper>

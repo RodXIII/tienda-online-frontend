@@ -1,4 +1,4 @@
-import './style/Invoice.css'
+import './style/CostumerInvoice.css'
 import axios from 'axios';
 // import SimpleModal from './DetailModal'
 import React, { Component } from 'react';
@@ -8,24 +8,32 @@ import Logo from '../logos/logo.png'
 
 
 
-class Invoice extends Component {
+class CostumerInvoice extends Component {
     constructor() {
         super();
         this.state={
-            userData:[]
+            invoices:[]
         }
     }
-    componentDidMount() {
-       console.log(localStorage.getItem('userId'))
-       var userId=localStorage.getItem('userId')
-        axios.get(`http://localhost:3001/inv/myproducts/${userId}`,{headers: {
+    findInvoice() {
+       let userId= this.search.value
+        axios.get(`http://localhost:3001/inv/invoices`,{headers: {
             Accept : 'application/json',
             Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
             .then(item => {
+                console.log(item)
+                var costumerInvoices=[]
+                item.data.map(element=>{
+                    console.log(userId+"--------"+element.UserId)
+                    if (element.UserId==userId){
+                        
+                        costumerInvoices.push(element)
+                    }
+                })
                 this.setState({
-                    userData:item.data
+                    invoices:costumerInvoices
                 })
                 
             })
@@ -33,7 +41,7 @@ class Invoice extends Component {
 
         }   
     render() {
-        const invoicesArray=this.state.userData
+        const invoicesArray=this.state.invoices
         console.log(invoicesArray)
         if(invoicesArray!==[]){
             invoicesArray.sort((a, b) =>{
@@ -63,7 +71,7 @@ class Invoice extends Component {
                         <p>Date: {date.getDay()}-{date.getMonth()}-{date.getFullYear()}</p>
                         </div>
                         
-                        <p> {localStorage.getItem('userName') }</p>
+                        <p>User id: {element.UserId }</p>
                     </div>
                 </div>
                 
@@ -78,8 +86,14 @@ class Invoice extends Component {
                 <ProfileMenu/>
                 <div className="invoiceSection">
                     
-                    <h4>Invoices</h4>
+                    <h4>Costumer Invoices</h4>
                     <div>
+                        <div className="costumerInvoiceSearch">
+                            <label className="costumerInvoiceItems" htmlFor="idInput">User Id</label>
+                            <input className="costumerInvoiceItems"  ref={input => this.search = input} id="idInput" type="text"/>
+                            <button className="costumerInvoiceItems" onClick={()=>this.findInvoice()}>Find Inv</button>
+                        </div>
+                        
                         {invoice}
                         
                     </div>
@@ -92,10 +106,10 @@ class Invoice extends Component {
         else{
             return(
                 <div className="invoiceSection">
-                    <h4>Sorry, you didn't purchase any product so far</h4>
+                    <h4>Not invoices available at the moment</h4>
                 </div>
             )
         }
     }
 }
-export default Invoice;
+export default CostumerInvoice;

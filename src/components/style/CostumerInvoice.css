@@ -1,0 +1,15 @@
+.costumerInvoiceSearch{
+    display: flex;
+    flex-direction: row;
+    margin: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+    padding: 3rem;
+   
+}
+
+.costumerInvoiceItems{
+    margin-right: 2rem;
+}

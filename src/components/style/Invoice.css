@@ -13,11 +13,11 @@
 .productInvoiceContainer{
     display:flex;
     flex-direction: row;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 0.01ch;
-    border-color: black;
-    padding: 1rem;
-    margin-bottom: 3rem;
+    border-color: black; */
+    /* padding: 1rem;*/
+    margin: 1rem; 
 }
 .invoiceLogoName{
     height:2rem;

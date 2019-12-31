@@ -18,6 +18,16 @@
     align-items: center;
     justify-content: center;
 }
+.adminMenu{
+    background: linear-gradient(to bottom, orange, orange);
+    height: 3rem;
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+
+}
 /* .MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected{
     color:white
 } */
