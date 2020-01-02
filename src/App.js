@@ -14,6 +14,7 @@ import Invoice from './components/Invoice'
 import ShoppingCart from './components/ShoppingCart'
 import Purchase from './components/Purchase'
 import CostumerInvoice from './components/CostumerInvoice'
+import EditProduct from './components/EditProduct'
 
 
 
@@ -53,6 +54,7 @@ class App extends Component{
           <Route exact path="/profile/invoice" component={Invoice} />
           <Route exact path="/profile/sales" />
           <Route exact path="/profile/adminInvoice" component={CostumerInvoice} />
+          <Route exact path="/profile/edit" component={EditProduct} />
           
         
          </div>

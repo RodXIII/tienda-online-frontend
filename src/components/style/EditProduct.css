@@ -1,0 +1,16 @@
+.editProductContainer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:2rem;
+}
+.editProductForm{
+    display:flex;
+    flex-direction: column;
+    margin: 0 20rem 20rem 20rem;
+    justify-content: center;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   padding: 4rem;
+    
+}
