@@ -115,11 +115,11 @@ class SalesHistory extends Component {
     }
     findYearTotal() {
 
-        if (this.state.graphOn === true) {
-            this.setState({
-                graphOn: false
-            })
-        }
+        // if (this.state.graphOn === true) {
+        //     this.setState({
+        //         graphOn: false
+        //     })
+        // }
         var total = 0
         var totalMonthSalesByYear = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         var inputYear = `${this.number1.value}${this.number2.value}${this.number3.value}${this.number4.value}`
@@ -141,7 +141,7 @@ class SalesHistory extends Component {
 
         this.setState({
             totalYear: total,
-            graphOn: !this.state.graphOn,
+            graphOn: true,
             dataBar: {
                 labels: ["January", "February", "March", "April", "May", "Jun", "July", "Agost", "September", "October", "November", "Dicember"],
                 datasets: [
