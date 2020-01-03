@@ -24,7 +24,7 @@ export default function DisabledTabs() {
       >
         <Tab label="Admin" href="/profileData" />
         <Tab label="Costumer Invoice" href="/profile/adminInvoice" />
-        <Tab label="Sales History" href="/profile/sales" />
+        <Tab label="Sales History" href="/profile/salesHistory" />
         <Tab label="Edit Product" href="/profile/edit" />
        </Tabs>
     </Paper>

@@ -15,6 +15,7 @@ import ShoppingCart from './components/ShoppingCart'
 import Purchase from './components/Purchase'
 import CostumerInvoice from './components/CostumerInvoice'
 import EditProduct from './components/EditProduct'
+import SalesHistory from './components/SalesHistory'
 
 
 
@@ -52,7 +53,7 @@ class App extends Component{
           <Route exact path="/profileData" component={Profile} />
           <Route exact path="/profile/purchases" component={Purchase} />
           <Route exact path="/profile/invoice" component={Invoice} />
-          <Route exact path="/profile/sales" />
+          <Route exact path="/profile/salesHistory" component={SalesHistory} />
           <Route exact path="/profile/adminInvoice" component={CostumerInvoice} />
           <Route exact path="/profile/edit" component={EditProduct} />
           

@@ -27,7 +27,12 @@ class Profile extends Component {
                 localStorage.setItem('userName', this.state.userData.userName)
                 console.log(user.data)
             })
-            .catch(err => { console.log(err) })
+            .catch(err => {
+
+                 console.log(err)
+                 localStorage.clear()
+
+             })
 
         }   
     render() {
