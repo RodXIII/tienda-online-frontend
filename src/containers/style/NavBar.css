@@ -1,0 +1,81 @@
+
+
+.menu{
+    background: linear-gradient(to bottom, grey, #E9E4F0);
+    height: 6rem;
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.profileMenu{
+    background: white;
+    height: 3rem;
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+}
+.adminMenu{
+    background: linear-gradient(to bottom, orange, orange);
+    height: 3rem;
+    display:flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: center;
+
+}
+/* .MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary.Mui-selected{
+    color:white
+} */
+
+/* a{
+    height:3rem;
+    margin: 3rem;
+    
+} */
+.dropDown{
+    margin-top: 10px;         
+}
+
+nav a{
+    text-decoration:none;
+    color:inherit;
+    font-size:14px;
+   
+    }
+   
+nav li{
+    display:inline-block;
+    width:150px;
+    height:30px;
+    padding:5px 10px;
+    background: linear-gradient(to bottom, grey, #E9E4F0);
+    /* border:1px solid #000; */
+    text-align:center;
+    color:#66647C;
+    position:relative;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+}
+          
+nav li:hover{
+    background-color:#DED8EA;
+    color:white;
+    }
+          
+nav li>ul{
+    display:none;
+    }
+
+nav li:hover>ul{
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    top:30px;
+    left:0px;
+}
+

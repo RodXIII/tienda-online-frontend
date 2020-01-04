@@ -1,0 +1,33 @@
+
+.searchContainer{
+    display:flex;
+    margin: 1rem 1rem 1rem 5rem;
+    width: 30rem;
+}
+.search{
+    width: 30rem;
+    padding: 0.1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+ 
+    
+}
+.sortBox{
+    align-items: center;
+    justify-content: center;
+    margin-left: 4rem;
+    display:flex;
+    flex-direction: row;
+}
+#sortPrice{
+    margin-left: 1rem;
+    height:1.2rem;
+    width: 1.2rem;
+}
+.searchButton{
+
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+ 
+}

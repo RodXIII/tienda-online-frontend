@@ -1,0 +1,21 @@
+.shoppingCartContainer{
+    display:flex;
+    flex-direction: column;
+    /* width: 80%; */
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   padding: 1rem;
+    
+}
+.formButton{
+    border-radius: 5px;
+    margin:2rem;
+}
+.formButton:hover{
+    margin:2rem;
+    border-radius: 5px;
+    background-color: grey;
+}

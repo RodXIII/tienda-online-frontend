@@ -1,0 +1,40 @@
+.brandSection{
+    display:grid;
+    width: 30%;
+    margin: 1rem;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: grey;
+    border-width: 0.1rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+}
+
+
+.brandName{
+    display:flex;
+   border-style: solid;
+   border-width: 0.2rem;
+   align-items: center;
+    justify-content: center;
+    margin:0.5rem;
+    padding:0.1rem;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+}
+
+.brandName:hover{
+    display:flex;
+   border-style: solid;
+   border-width: 0.2rem;
+   align-items: center;
+    justify-content: center;
+    margin:0.5rem;
+    padding:0.1rem;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   opacity: 50%;
+}

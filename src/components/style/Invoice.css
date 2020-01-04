@@ -1,0 +1,53 @@
+.invoiceContainer {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 50rem;
+    border-style: solid;
+    border-width: 0.01ch;
+    border-color: black;
+    width: 40rem;
+    padding: 3rem;
+    
+}
+.productInvoiceContainer{
+    display:flex;
+    flex-direction: row;
+    /* border-style: solid;
+    border-width: 0.01ch;
+    border-color: black; */
+    /* padding: 1rem;*/
+    margin: 1rem; 
+}
+.invoiceLogoName{
+    height:2rem;
+    width: 8rem;
+}
+.invoiceLogo{
+    height:2rem;
+    width: 2rem;
+}
+.invoiceP{
+    margin-right: 1rem;
+}
+.invoiceSection {
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 10rem 10rem 10rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #999;
+    padding: 3rem;
+   
+}
+.invoiceInfoContainer{
+    display:flex;
+    flex-direction: row;
+    border-style: solid;
+    border-width: 0.01ch;
+    border-color: black;
+    padding: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}

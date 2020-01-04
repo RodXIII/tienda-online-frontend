@@ -1,0 +1,94 @@
+.productCard{
+    display: flex;
+    width: 15rem;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+    /* margin:3rem; */
+    /* padding:1rem; */
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    filter:brightness(0.4);
+
+}
+
+
+.section{
+    margin:1rem;
+    display:flex;
+    height: 20rem;
+    border-style: solid;
+    border-width: 0.01ch;
+    border-color:black;
+    width: 60%;
+   justify-content: center;
+   border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+
+}
+#selectedProduct{
+
+    background: linear-gradient(to bottom,white, black);
+    color:white;
+    border-style: solid;
+    border-width: 0.01ch;
+    /* border-color:black; */
+    opacity:100%;
+    width: 25rem;
+    height: 20rem;
+    filter:brightness(1);
+    
+}
+#selectedProduct:hover{
+
+    background: linear-gradient(to bottom,white, black);
+    color:white;
+    border-style: solid;
+    border-width: 0.01ch;
+    /* border-color:black; */
+    
+  
+    opacity:50%;
+    width: 25rem;
+    height: 20rem;
+    filter:brightness(1);
+    
+}
+button:hover{
+    
+    background-color:#929BA3;
+    width: 5rem;
+}
+
+button{
+
+    background-color: white;
+    width: 5rem;
+} 
+.productImage{
+    box-shadow: 2px 2px 5px #999;
+    margin-bottom:1rem;
+    border-radius: 5px;
+}
+
+.price{
+    font-weight: bold;
+}
+.imageArrow{
+    position:absolute;
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+   
+    
+}
+.imageArrow:hover{
+    position:absolute;
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+
+     opacity:50%;
+}
+
+

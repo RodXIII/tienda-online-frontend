@@ -1,0 +1,68 @@
+.salesHistoryContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-style: solid;
+    border-width: 0.05rem;
+    padding:1rem;
+    background-color:BLACK;
+    
+}
+.yearNumber{
+    height: 2rem;
+    width: 2rem;
+}
+.yearMonthContainer{
+    display:flex;
+    flex-direction: row;
+    background-color: white;
+ 
+}
+.yearItemsContainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.salesHistoryTitle{
+    color:white;
+}
+.yearHistoryContainer{
+    margin:2rem;
+    padding:2rem;
+    border-style: solid;
+   
+    border-width: 0.05rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+    background-color:white;
+    width: 80%;
+}
+.monthContainer{
+    margin:2rem;
+    padding:2rem;
+    border-style: solid;
+    border-width: 0.05rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15rem;
+    width: 30rem;
+}
+.dayContainer{
+    margin:2rem;
+    padding:2rem;
+    border-style: solid;
+    border-width: 0.05rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15rem;
+    width: 30rem;
+}
+
+.historyItems{
+    margin:0.5rem;
+}

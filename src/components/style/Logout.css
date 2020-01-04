@@ -1,0 +1,29 @@
+.logoutForm{
+    display:flex;
+    flex-direction: column;
+    margin: 5rem 20rem 20rem 20rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+   box-shadow: 2px 2px 5px #999;
+   padding: 3rem;
+    
+}
+
+.Logout{
+    margin: 0.5rem;
+}
+.formButton{
+    border-radius: 5px;
+    margin:2rem;
+}
+.formButton:hover{
+    margin:2rem;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+/* .formFields{
+    display:flex;
+    flex-direction: column;
+} */
