@@ -1,68 +1,77 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# THE ROCKSTORE (Tienda de instrumentos musicales online)
 
-## Available Scripts
+Este proyecto es un ejemplo ficticio para crear una e-Commerce o tienda online, en este caso basada en una tienda de
+instrumentos musicales. Esta app simula un sistema de gestion de ventas de instrumentos vía online, por lo tanto, se podrán dar de alta usuarios, consultar su perfil, realizar compras, consultar las facturas de compra y en la parte de administrador se podran dar de alta nuevos productos, editar los existentes, consultar las facturas de todos los clientes asi como el historial de ventas por dia, més y año.
 
-In the project directory, you can run:
+## Comenzando 🚀
 
-### `npm start`
+Para instalar el programa y probarlo necesitarás descargar los archivos json para crear la base de datos, la parte de 
+back, que suministrare el enlace más abajo y este mismo reposiorio que forma la parte del front.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Mira **Deployment** para conocer como desplegar el proyecto.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Pre-requisitos 📋
 
-### `npm test`
+Necesitas tener instalado Node.js, y todas las dependencias suministradas en el package.json tanto del back como del front.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para hacer uso de la base de datos, debe tener instalado algun sistema de gestion de bases de datos tipo SQL (Mysql, MariaDB) y crear una base de datos llamada ecommerce, en este caso debe poner por defecto al crearla usuario: ecommerce,
+y password: ecommerce para que funcione.
 
-### `npm run build`
+```
+https://nodejs.org/es/
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+```
+https://github.com/RodXIII/eCommerce-backend.git (Repositorio donde se encuentra el back del proyecto)
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Instalación 🔧
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Una vez descargados los dos repositorios e instalado Node.js en su equipo, desde una consola de comandos entre en el 
+directorio de cada una de las partes del proyecto (Front y Back) y esriba en cada una de ellas:
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+$ npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Despliegue 📦
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Una vez instaladas las dependencias de cada una de las partes del proyecto, se procedera a crear y llenar las tablas 
+de la base de datos. Para conseguir esto, en una consola de comandos, entramos en el directorio del proyecto backend 
+y tecleamos: 
 
-## Learn More
+```
+Sequelize db:seed:all
+```
+Una vez creada y sembrada la base de datos, debemos levantar el back y el front, tecleando en una consola de comandos,este mismo orden y en su respectivo directorio:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+$ npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+De este modo se abrirá una ventana en nuestro navegador predefinido con la aplicacion corriendo de forma local en el puerto 3000.
 
-### Code Splitting
+## Construido con 🛠️
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Para desarrollar este proyecto se han utilizado las siguientes tecnologías:
 
-### Analyzing the Bundle Size
+* [React.js](https://es.reactjs.org/) - El framework web usado
+* [Node.js](https://nodejs.org/es/) - Manejador de dependencias
+* [Express.js](https://expressjs.com/es/) - Usado para generar la API
+* [Sequelize](https://sequelize.org/) - ORM usado para conectar con la DB
+* [MariaDB](https://go.mariadb.com/) - Sistema OpenSource de gestion de bases de datos MySql
+* [Java Script](https://www.javascript.com/) - Lenguaje de desarrollo web
+* [Git](https://git-scm.com/) - Sistema de control de versiones
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Autores ✒️
 
-### Making a Progressive Web App
+* **Ricardo Salas** - *Desarrollador* - [RicardoASalas](https://github.com/RicardoASalas)
+* **Rodrigo Navarro** - *Desarollador* - [RodXIII](https://github.com/RodXIII)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Licencia 📄
 
-### Advanced Configuration
+Este proyecto está bajo la Licencia (Open Source) 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---

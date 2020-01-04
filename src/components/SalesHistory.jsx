@@ -195,29 +195,30 @@ class SalesHistory extends Component {
                     <div >
                         <ProfileMenu />
                         <div className="salesHistoryContainer">
-                        <div className="yearMonthContainer">
-                        <div className="dayContainer">
-                                <input className="historyItems" name="day" ref={input => this.day = input} type="date" placeholder="Find Product by Id" />
-                                <button className="historyItems" onClick={() => this.findDayTotal()}>Find</button>
-                                <h4>Totale sales by day: {this.state.totalDay}€</h4>
-                            </div>
-                            <div className="monthContainer">
-                                <input className="historyItems" name="month" ref={input => this.month = input} type="month" placeholder="Find Product by Id" />
-                                <button className="historyItems" onClick={() => this.findMonthTotal()}>Find</button>
-                                <h4>Totale sales by Month: {this.state.totalMonth}€</h4>
-                            </div>
+                            <h4 className="salesHistoryTitle">SALE'S HISTORY</h4>
+                            <div className="yearMonthContainer">
+                                <div className="dayContainer">
+                                    <input className="historyItems" name="day" ref={input => this.day = input} type="date" placeholder="Find Product by Id" />
+                                    <button className="historyItems" onClick={() => this.findDayTotal()}>Find</button>
+                                    <h4>Totale sales by day: {this.state.totalDay}€</h4>
+                                </div>
+                                <div className="monthContainer">
+                                    <input className="historyItems" name="month" ref={input => this.month = input} type="month" placeholder="Find Product by Id" />
+                                    <button className="historyItems" onClick={() => this.findMonthTotal()}>Find</button>
+                                    <h4>Totale sales by Month: {this.state.totalMonth}€</h4>
+                                </div>
                             </div>
                             <div className="yearHistoryContainer">
+                                <div className="yearItemsContainer">
+                                <h5>Check sales by year</h5>
                                 <div>
-                                    <input className="yearNumber" name="number1" min="0" max="9" ref={input => this.number1 = input} type="number" placeholder="2" />
-                                    <input className="yearNumber" name="number2" min="0" max="9" ref={input => this.number2 = input} type="number" placeholder="0" />
+                                    <input className="yearNumber" value="2" name="number1" min="0" max="9" ref={input => this.number1 = input} type="number" placeholder="2" />
+                                    <input className="yearNumber" value="0" name="number2" min="0" max="9" ref={input => this.number2 = input} type="number" placeholder="0" />
                                     <input className="yearNumber" name="number3" min="0" max="9" ref={input => this.number3 = input} type="number" placeholder="1" />
                                     <input className="yearNumber" name="number4" min="0" max="9" ref={input => this.number4 = input} type="number" placeholder="9" />
                                 </div>
-
                                 <button className="historyItems" onClick={() => this.findYearTotal()}>Find</button>
-
-
+                                </div>
                             </div>
 
                         </div>
@@ -230,33 +231,36 @@ class SalesHistory extends Component {
                     <div >
                         <ProfileMenu />
                         <div className="salesHistoryContainer">
-                        <div className="yearMonthContainer">
-                            <div className="dayContainer">
-                                <input className="historyItems" name="day" ref={input => this.day = input} type="date" placeholder="Find Product by Id" />
-                                <button className="historyItems" onClick={() => this.findDayTotal()}>Find</button>
-                                <h4>Totale sales by day: {this.state.totalDay}€</h4>
-                            </div>
-                            <div className="monthContainer">
-                                <input className="historyItems" name="month" ref={input => this.month = input} type="month" placeholder="Find Product by Id" />
-                                <button className="historyItems" onClick={() => this.findMonthTotal()}>Find</button>
-                                <h4>Totale sales by Month: {this.state.totalMonth}€</h4>
-                            </div>
+                        <h4 className="salesHistoryTitle">SALE'S HISTORY</h4>
+
+                            <div className="yearMonthContainer">
+                                <div className="dayContainer">
+                                    <input className="historyItems" name="day" ref={input => this.day = input} type="date" placeholder="Find Product by Id" />
+                                    <button className="historyItems" onClick={() => this.findDayTotal()}>Find</button>
+                                    <h4>Totale sales by day: {this.state.totalDay}€</h4>
+                                </div>
+                                <div className="monthContainer">
+                                    <input className="historyItems" name="month" ref={input => this.month = input} type="month" placeholder="Find Product by Id" />
+                                    <button className="historyItems" onClick={() => this.findMonthTotal()}>Find</button>
+                                    <h4>Totale sales by Month: {this.state.totalMonth}€</h4>
+                                </div>
                             </div>
                             <div className="yearHistoryContainer">
                                 <div>
-                                    <input className="yearNumber" name="number1" min="0" max="9" ref={input => this.number1 = input} type="number" placeholder="2" />
-                                    <input className="yearNumber" name="number2" min="0" max="9" ref={input => this.number2 = input} type="number" placeholder="0" />
-                                    <input className="yearNumber" name="number3" min="0" max="9" ref={input => this.number3 = input} type="number" placeholder="1" />
-                                    <input className="yearNumber" name="number4" min="0" max="9" ref={input => this.number4 = input} type="number" placeholder="9" />
+                                    <h5>Check sales by year</h5>
+                                    <input className="yearNumber" value="2" name="number1" min="0" max="9" ref={input => this.number1 = input} type="number" placeholder="2" />
+                                    <input className="yearNumber" value="0" name="number2" min="0" max="9" ref={input => this.number2 = input} type="number" placeholder="0" />
+                                    <input className="yearNumber"  name="number3" min="0" max="9" ref={input => this.number3 = input} type="number" placeholder="1" />
+                                    <input className="yearNumber"  name="number4" min="0" max="9" ref={input => this.number4 = input} type="number" placeholder="9" />
                                 </div>
 
                                 <button className="historyItems" onClick={() => this.findYearTotal()}>Find</button>
-
+                                <h4>Totale sales by year: {this.state.totalYear}€</h4>
                                 <MDBContainer id="graph" className="graphContainer">
                                     <h3 className="mt-5">SALES BY YEAR</h3>
                                     <Bar id="graph" data={this.state.dataBar} options={this.state.barChartOptions} />
                                 </MDBContainer>
-                                <h4>Totale sales by year: {this.state.totalYear}€</h4>
+                                
                             </div>
 
                         </div>
